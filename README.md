@@ -3,8 +3,24 @@
 This is Neoforge 1.20.4 compat version.
 
 #### Some Change
-* Don't support other mode.
+* Don't support other mod.
 
+#### Loot Table
+* Cactus | Flower
+  * Shears || Silk Touch => Cactus
+  * !(Shears || Silk Touch) => explosion_decay | apply_bonus(bonusMultiplier=1) | set_count(count=1) : Fibers
+  * !(Shears || Silk Touch) => explosion_decay | apply_bonus(bonusMultiplier=1) | set_count(count=1) : Petals
+  * !(Shears || Silk Touch) => explosion_decay | apply_bonus(bonusMultiplier=1,uniform_bonus_count,fortune) | set_count(count=2) : Seeds
+* Crop
+  * First Pool(Age=5 && Shears || Silk Touch)
+    * Cactus
+    * Seeds
+  * Second Pool(Age=5 && !(Shears || Silk Touch))
+    * set_count | explosion_decay | apply_bonus : Fibers
+    * set_count | explosion_decay | apply_bonus : petals
+    * set_count(2) | explosion_decay | apply_bonus : Seeds
+  * Third Pool(!(age=5) && !(Shears || Silk Touch))
+    * explosion_decay | seeds
 Origin repo: [luxtracon/floralis](https://github.com/luxtracon/floralis)
 ___
 Floralis aims to make any type of dye farmable by adding farmable cacti and flowers to the game. Furthemore it aims to do that in an automatable way with the help of third party mods. For example with a Multi Farm from Forestry, Garden Cloche from Immersive Engineering, Plant Sower and Plant Gatherer from Industrial Foregoing and Phytogenic Insulator from Thermal Expansion.

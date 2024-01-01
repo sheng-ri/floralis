@@ -21,6 +21,7 @@ import java.util.List;
 public class FloralisBlocks {
 	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(FloralisConstant.ID);
 
+
 	public static final DeferredBlock<Block> WHITE_DYE_BLOCK = BLOCKS.register("white_dye_block", () -> new PureFallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.SNOW)));
 	public static final DeferredBlock<Block> LIGHT_GRAY_DYE_BLOCK = BLOCKS.register("light_gray_dye_block", () -> new PureFallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_LIGHT_GRAY)));
 	public static final DeferredBlock<Block> GRAY_DYE_BLOCK = BLOCKS.register("gray_dye_block", () -> new PureFallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_GRAY)));
@@ -40,40 +41,54 @@ public class FloralisBlocks {
 
 	public static final DeferredBlock<Block> PLANT_FIBERS_BLOCK = BLOCKS.register("plant_fibers_block", () -> new PlantFibersBlock(FloralisBlocks.propertiesFibersBlock()));
 
-	public static final DeferredBlock<Block> WHITE_FLOWER = BLOCKS.register("white_flower", () -> new FlowerPlantBlock(FloralisBlocks.propertiesFlower()));
-	public static final DeferredBlock<Block> LIGHT_GRAY_FLOWER = BLOCKS.register("light_gray_flower", () -> new FlowerPlantBlock(FloralisBlocks.propertiesFlower()));
-	public static final DeferredBlock<Block> GRAY_FLOWER = BLOCKS.register("gray_flower", () -> new FlowerPlantBlock(FloralisBlocks.propertiesFlower()));
-	public static final DeferredBlock<Block> BLACK_FLOWER = BLOCKS.register("black_flower", () -> new FlowerPlantBlock(FloralisBlocks.propertiesFlower()));
-	public static final DeferredBlock<Block> BROWN_FLOWER = BLOCKS.register("brown_flower", () -> new FlowerPlantBlock(FloralisBlocks.propertiesFlower()));
-	public static final DeferredBlock<Block> RED_FLOWER = BLOCKS.register("red_flower", () -> new FlowerPlantBlock(FloralisBlocks.propertiesFlower()));
-	public static final DeferredBlock<Block> ORANGE_FLOWER = BLOCKS.register("orange_flower", () -> new FlowerPlantBlock(FloralisBlocks.propertiesFlower()));
-	public static final DeferredBlock<Block> YELLOW_FLOWER = BLOCKS.register("yellow_flower", () -> new FlowerPlantBlock(FloralisBlocks.propertiesFlower()));
-	public static final DeferredBlock<Block> LIME_FLOWER = BLOCKS.register("lime_flower", () -> new FlowerPlantBlock(FloralisBlocks.propertiesFlower()));
-	public static final DeferredBlock<Block> GREEN_FLOWER = BLOCKS.register("green_flower", () -> new FlowerPlantBlock(FloralisBlocks.propertiesFlower()));
-	public static final DeferredBlock<Block> CYAN_FLOWER = BLOCKS.register("cyan_flower", () -> new FlowerPlantBlock(FloralisBlocks.propertiesFlower()));
-	public static final DeferredBlock<Block> LIGHT_BLUE_FLOWER = BLOCKS.register("light_blue_flower", () -> new FlowerPlantBlock(FloralisBlocks.propertiesFlower()));
-	public static final DeferredBlock<Block> BLUE_FLOWER = BLOCKS.register("blue_flower", () -> new FlowerPlantBlock(FloralisBlocks.propertiesFlower()));
-	public static final DeferredBlock<Block> PURPLE_FLOWER = BLOCKS.register("purple_flower", () -> new FlowerPlantBlock(FloralisBlocks.propertiesFlower()));
-	public static final DeferredBlock<Block> MAGENTA_FLOWER = BLOCKS.register("magenta_flower", () -> new FlowerPlantBlock(FloralisBlocks.propertiesFlower()));
-	public static final DeferredBlock<Block> PINK_FLOWER = BLOCKS.register("pink_flower", () -> new FlowerPlantBlock(FloralisBlocks.propertiesFlower()));
+	public static List<DeferredBlock<? extends BushBlock>> PLANT_BLOCK = new ArrayList<>();
 
-	public static final DeferredBlock<Block> WHITE_CACTUS = BLOCKS.register("white_cactus", () -> new CactusPlantBlock(FloralisBlocks.propertiesCactus()));
-	public static final DeferredBlock<Block> LIGHT_GRAY_CACTUS = BLOCKS.register("light_gray_cactus", () -> new CactusPlantBlock(FloralisBlocks.propertiesCactus()));
-	public static final DeferredBlock<Block> GRAY_CACTUS = BLOCKS.register("gray_cactus", () -> new CactusPlantBlock(FloralisBlocks.propertiesCactus()));
-	public static final DeferredBlock<Block> BLACK_CACTUS = BLOCKS.register("black_cactus", () -> new CactusPlantBlock(FloralisBlocks.propertiesCactus()));
-	public static final DeferredBlock<Block> BROWN_CACTUS = BLOCKS.register("brown_cactus", () -> new CactusPlantBlock(FloralisBlocks.propertiesCactus()));
-	public static final DeferredBlock<Block> RED_CACTUS = BLOCKS.register("red_cactus", () -> new CactusPlantBlock(FloralisBlocks.propertiesCactus()));
-	public static final DeferredBlock<Block> ORANGE_CACTUS = BLOCKS.register("orange_cactus", () -> new CactusPlantBlock(FloralisBlocks.propertiesCactus()));
-	public static final DeferredBlock<Block> YELLOW_CACTUS = BLOCKS.register("yellow_cactus", () -> new CactusPlantBlock(FloralisBlocks.propertiesCactus()));
-	public static final DeferredBlock<Block> LIME_CACTUS = BLOCKS.register("lime_cactus", () -> new CactusPlantBlock(FloralisBlocks.propertiesCactus()));
-	public static final DeferredBlock<Block> GREEN_CACTUS = BLOCKS.register("green_cactus", () -> new CactusPlantBlock(FloralisBlocks.propertiesCactus()));
-	public static final DeferredBlock<Block> CYAN_CACTUS = BLOCKS.register("cyan_cactus", () -> new CactusPlantBlock(FloralisBlocks.propertiesCactus()));
-	public static final DeferredBlock<Block> LIGHT_BLUE_CACTUS = BLOCKS.register("light_blue_cactus", () -> new CactusPlantBlock(FloralisBlocks.propertiesCactus()));
-	public static final DeferredBlock<Block> BLUE_CACTUS = BLOCKS.register("blue_cactus", () -> new CactusPlantBlock(FloralisBlocks.propertiesCactus()));
-	public static final DeferredBlock<Block> PURPLE_CACTUS = BLOCKS.register("purple_cactus", () -> new CactusPlantBlock(FloralisBlocks.propertiesCactus()));
-	public static final DeferredBlock<Block> MAGENTA_CACTUS = BLOCKS.register("magenta_cactus", () -> new CactusPlantBlock(FloralisBlocks.propertiesCactus()));
-	public static final DeferredBlock<Block> PINK_CACTUS = BLOCKS.register("pink_cactus", () -> new CactusPlantBlock(FloralisBlocks.propertiesCactus()));
+	public static final DeferredBlock<FlowerPlantBlock> WHITE_FLOWER = registerFlowerPlant("white_flower");
+	public static final DeferredBlock<FlowerPlantBlock> LIGHT_GRAY_FLOWER = registerFlowerPlant("light_gray_flower");
+	public static final DeferredBlock<FlowerPlantBlock> GRAY_FLOWER = registerFlowerPlant("gray_flower");
+	public static final DeferredBlock<FlowerPlantBlock> BLACK_FLOWER = registerFlowerPlant("black_flower");
+	public static final DeferredBlock<FlowerPlantBlock> BROWN_FLOWER = registerFlowerPlant("brown_flower");
+	public static final DeferredBlock<FlowerPlantBlock> RED_FLOWER = registerFlowerPlant("red_flower");
+	public static final DeferredBlock<FlowerPlantBlock> ORANGE_FLOWER = registerFlowerPlant("orange_flower");
+	public static final DeferredBlock<FlowerPlantBlock> YELLOW_FLOWER = registerFlowerPlant("yellow_flower");
+	public static final DeferredBlock<FlowerPlantBlock> LIME_FLOWER = registerFlowerPlant("lime_flower");
+	public static final DeferredBlock<FlowerPlantBlock> GREEN_FLOWER = registerFlowerPlant("green_flower");
+	public static final DeferredBlock<FlowerPlantBlock> CYAN_FLOWER = registerFlowerPlant("cyan_flower");
+	public static final DeferredBlock<FlowerPlantBlock> LIGHT_BLUE_FLOWER = registerFlowerPlant("light_blue_flower");
+	public static final DeferredBlock<FlowerPlantBlock> BLUE_FLOWER = registerFlowerPlant("blue_flower");
+	public static final DeferredBlock<FlowerPlantBlock> PURPLE_FLOWER = registerFlowerPlant("purple_flower");
+	public static final DeferredBlock<FlowerPlantBlock> MAGENTA_FLOWER = registerFlowerPlant("magenta_flower");
+	public static final DeferredBlock<FlowerPlantBlock> PINK_FLOWER = registerFlowerPlant("pink_flower");
 
+	private static DeferredBlock<FlowerPlantBlock> registerFlowerPlant(String name) {
+		final var holder = BLOCKS.register(name, () -> new FlowerPlantBlock(propertiesFlower()));
+		PLANT_BLOCK.add(holder);
+		return holder;
+	}
+
+	public static final DeferredBlock<CactusPlantBlock> WHITE_CACTUS = registerCactusPlant("white_cactus");
+	public static final DeferredBlock<CactusPlantBlock> LIGHT_GRAY_CACTUS = registerCactusPlant("light_gray_cactus");
+	public static final DeferredBlock<CactusPlantBlock> GRAY_CACTUS = registerCactusPlant("gray_cactus");
+	public static final DeferredBlock<CactusPlantBlock> BLACK_CACTUS = registerCactusPlant("black_cactus");
+	public static final DeferredBlock<CactusPlantBlock> BROWN_CACTUS = registerCactusPlant("brown_cactus");
+	public static final DeferredBlock<CactusPlantBlock> RED_CACTUS = registerCactusPlant("red_cactus");
+	public static final DeferredBlock<CactusPlantBlock> ORANGE_CACTUS = registerCactusPlant("orange_cactus");
+	public static final DeferredBlock<CactusPlantBlock> YELLOW_CACTUS = registerCactusPlant("yellow_cactus");
+	public static final DeferredBlock<CactusPlantBlock> LIME_CACTUS = registerCactusPlant("lime_cactus");
+	public static final DeferredBlock<CactusPlantBlock> GREEN_CACTUS = registerCactusPlant("green_cactus");
+	public static final DeferredBlock<CactusPlantBlock> CYAN_CACTUS = registerCactusPlant("cyan_cactus");
+	public static final DeferredBlock<CactusPlantBlock> LIGHT_BLUE_CACTUS = registerCactusPlant("light_blue_cactus");
+	public static final DeferredBlock<CactusPlantBlock> BLUE_CACTUS = registerCactusPlant("blue_cactus");
+	public static final DeferredBlock<CactusPlantBlock> PURPLE_CACTUS = registerCactusPlant("purple_cactus");
+	public static final DeferredBlock<CactusPlantBlock> MAGENTA_CACTUS = registerCactusPlant("magenta_cactus");
+	public static final DeferredBlock<CactusPlantBlock> PINK_CACTUS = registerCactusPlant("pink_cactus");
+
+	public static DeferredBlock<CactusPlantBlock> registerCactusPlant(String name) {
+		final var holder = BLOCKS.register(name, () -> new CactusPlantBlock(propertiesCactusCrop()));
+		PLANT_BLOCK.add(holder);
+		return holder;
+	}
+	
 	public static final DeferredBlock<Block> POTTED_WHITE_FLOWER = BLOCKS.register("potted_white_flower", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, WHITE_FLOWER, FloralisBlocks.propertiesPotted()));
 	public static final DeferredBlock<Block> POTTED_LIGHT_GRAY_FLOWER = BLOCKS.register("potted_light_gray_flower", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, LIGHT_GRAY_FLOWER, FloralisBlocks.propertiesPotted()));
 	public static final DeferredBlock<Block> POTTED_GRAY_FLOWER = BLOCKS.register("potted_gray_flower", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, GRAY_FLOWER, FloralisBlocks.propertiesPotted()));
@@ -108,24 +123,24 @@ public class FloralisBlocks {
 	public static final DeferredBlock<Block> POTTED_MAGENTA_CACTUS = BLOCKS.register("potted_magenta_cactus", () -> new CactusPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, MAGENTA_CACTUS, FloralisBlocks.propertiesPotted()));
 	public static final DeferredBlock<Block> POTTED_PINK_CACTUS = BLOCKS.register("potted_pink_cactus", () -> new CactusPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, PINK_CACTUS, FloralisBlocks.propertiesPotted()));
 
-	public static final List<DeferredBlock<CactusCropBlock>> CROP_BLOCK = new ArrayList<>();
+	public static final List<DeferredBlock<? extends CropBlock>> CROP_BLOCK = new ArrayList<>();
 	
-	public static final DeferredBlock<Block> WHITE_FLOWER_CROP = BLOCKS.register("white_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> LIGHT_GRAY_FLOWER_CROP = BLOCKS.register("light_gray_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> GRAY_FLOWER_CROP = BLOCKS.register("gray_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> BLACK_FLOWER_CROP = BLOCKS.register("black_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> BROWN_FLOWER_CROP = BLOCKS.register("brown_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> RED_FLOWER_CROP = BLOCKS.register("red_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> ORANGE_FLOWER_CROP = BLOCKS.register("orange_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> YELLOW_FLOWER_CROP = BLOCKS.register("yellow_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> LIME_FLOWER_CROP = BLOCKS.register("lime_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> GREEN_FLOWER_CROP = BLOCKS.register("green_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> CYAN_FLOWER_CROP = BLOCKS.register("cyan_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> LIGHT_BLUE_FLOWER_CROP = BLOCKS.register("light_blue_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> BLUE_FLOWER_CROP = BLOCKS.register("blue_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> PURPLE_FLOWER_CROP = BLOCKS.register("purple_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> MAGENTA_FLOWER_CROP = BLOCKS.register("magenta_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> PINK_FLOWER_CROP = BLOCKS.register("pink_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
+	public static final DeferredBlock<FlowerCropBlock> WHITE_FLOWER_CROP = registerFlowerCrop("white_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> LIGHT_GRAY_FLOWER_CROP = registerFlowerCrop("light_gray_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> GRAY_FLOWER_CROP = registerFlowerCrop("gray_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> BLACK_FLOWER_CROP = registerFlowerCrop("black_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> BROWN_FLOWER_CROP = registerFlowerCrop("brown_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> RED_FLOWER_CROP = registerFlowerCrop("red_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> ORANGE_FLOWER_CROP = registerFlowerCrop("orange_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> YELLOW_FLOWER_CROP = registerFlowerCrop("yellow_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> LIME_FLOWER_CROP = registerFlowerCrop("lime_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> GREEN_FLOWER_CROP = registerFlowerCrop("green_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> CYAN_FLOWER_CROP = registerFlowerCrop("cyan_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> LIGHT_BLUE_FLOWER_CROP = registerFlowerCrop("light_blue_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> BLUE_FLOWER_CROP = registerFlowerCrop("blue_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> PURPLE_FLOWER_CROP = registerFlowerCrop("purple_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> MAGENTA_FLOWER_CROP = registerFlowerCrop("magenta_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> PINK_FLOWER_CROP = registerFlowerCrop("pink_flower_crop");
 
 	public static final DeferredBlock<CactusCropBlock> WHITE_CACTUS_CROP = registerCactusCrop("white_cactus_crop");
 	public static final DeferredBlock<CactusCropBlock> LIGHT_GRAY_CACTUS_CROP = registerCactusCrop("light_gray_cactus_crop");
@@ -144,22 +159,22 @@ public class FloralisBlocks {
 	public static final DeferredBlock<CactusCropBlock> MAGENTA_CACTUS_CROP = registerCactusCrop("magenta_cactus_crop");
 	public static final DeferredBlock<CactusCropBlock> PINK_CACTUS_CROP = registerCactusCrop("pink_cactus_crop");
 
-	public static final DeferredBlock<Block> CLOCHED_WHITE_FLOWER_CROP = BLOCKS.register("cloched_white_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> CLOCHED_LIGHT_GRAY_FLOWER_CROP = BLOCKS.register("cloched_light_gray_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> CLOCHED_GRAY_FLOWER_CROP = BLOCKS.register("cloched_gray_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> CLOCHED_BLACK_FLOWER_CROP = BLOCKS.register("cloched_black_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> CLOCHED_BROWN_FLOWER_CROP = BLOCKS.register("cloched_brown_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> CLOCHED_RED_FLOWER_CROP = BLOCKS.register("cloched_red_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> CLOCHED_ORANGE_FLOWER_CROP = BLOCKS.register("cloched_orange_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> CLOCHED_YELLOW_FLOWER_CROP = BLOCKS.register("cloched_yellow_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> CLOCHED_LIME_FLOWER_CROP = BLOCKS.register("cloched_lime_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> CLOCHED_GREEN_FLOWER_CROP = BLOCKS.register("cloched_green_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> CLOCHED_CYAN_FLOWER_CROP = BLOCKS.register("cloched_cyan_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> CLOCHED_LIGHT_BLUE_FLOWER_CROP = BLOCKS.register("cloched_light_blue_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> CLOCHED_BLUE_FLOWER_CROP = BLOCKS.register("cloched_blue_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> CLOCHED_PURPLE_FLOWER_CROP = BLOCKS.register("cloched_purple_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> CLOCHED_MAGENTA_FLOWER_CROP = BLOCKS.register("cloched_magenta_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
-	public static final DeferredBlock<Block> CLOCHED_PINK_FLOWER_CROP = BLOCKS.register("cloched_pink_flower_crop", () -> new FlowerCropBlock(FloralisBlocks.propertiesCrop()));
+	public static final DeferredBlock<FlowerCropBlock> CLOCHED_WHITE_FLOWER_CROP = registerFlowerCrop("cloched_white_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> CLOCHED_LIGHT_GRAY_FLOWER_CROP = registerFlowerCrop("cloched_light_gray_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> CLOCHED_GRAY_FLOWER_CROP = registerFlowerCrop("cloched_gray_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> CLOCHED_BLACK_FLOWER_CROP = registerFlowerCrop("cloched_black_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> CLOCHED_BROWN_FLOWER_CROP = registerFlowerCrop("cloched_brown_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> CLOCHED_RED_FLOWER_CROP = registerFlowerCrop("cloched_red_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> CLOCHED_ORANGE_FLOWER_CROP = registerFlowerCrop("cloched_orange_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> CLOCHED_YELLOW_FLOWER_CROP = registerFlowerCrop("cloched_yellow_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> CLOCHED_LIME_FLOWER_CROP = registerFlowerCrop("cloched_lime_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> CLOCHED_GREEN_FLOWER_CROP = registerFlowerCrop("cloched_green_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> CLOCHED_CYAN_FLOWER_CROP = registerFlowerCrop("cloched_cyan_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> CLOCHED_LIGHT_BLUE_FLOWER_CROP = registerFlowerCrop("cloched_light_blue_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> CLOCHED_BLUE_FLOWER_CROP = registerFlowerCrop("cloched_blue_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> CLOCHED_PURPLE_FLOWER_CROP = registerFlowerCrop("cloched_purple_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> CLOCHED_MAGENTA_FLOWER_CROP = registerFlowerCrop("cloched_magenta_flower_crop");
+	public static final DeferredBlock<FlowerCropBlock> CLOCHED_PINK_FLOWER_CROP = registerFlowerCrop("cloched_pink_flower_crop");
 
 	public static final DeferredBlock<CactusCropBlock> CLOCHED_WHITE_CACTUS_CROP = registerCactusCrop("cloched_white_cactus_crop");
 	public static final DeferredBlock<CactusCropBlock> CLOCHED_LIGHT_GRAY_CACTUS_CROP = registerCactusCrop("cloched_light_gray_cactus_crop");
@@ -178,8 +193,14 @@ public class FloralisBlocks {
 	public static final DeferredBlock<CactusCropBlock> CLOCHED_MAGENTA_CACTUS_CROP = registerCactusCrop("cloched_magenta_cactus_crop");
 	public static final DeferredBlock<CactusCropBlock> CLOCHED_PINK_CACTUS_CROP = registerCactusCrop("cloched_pink_cactus_crop");
 
+	public static DeferredBlock<FlowerCropBlock> registerFlowerCrop(String name) {
+		final var holder = BLOCKS.register(name,() -> new FlowerCropBlock(FloralisBlocks.propertiesFlower()));
+		CROP_BLOCK.add(holder);
+		return holder;
+	}
+	
 	public static DeferredBlock<CactusCropBlock> registerCactusCrop(String name) {
-		final var holder = BLOCKS.register(name, () -> new CactusCropBlock(FloralisBlocks.propertiesCactus()));
+		final var holder = BLOCKS.register(name, () -> new CactusCropBlock(FloralisBlocks.propertiesCactusCrop()));
 		CROP_BLOCK.add(holder);
 		return holder;
 	}
@@ -196,7 +217,7 @@ public class FloralisBlocks {
 		return BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).pushReaction(PushReaction.DESTROY).sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).instabreak().noCollission();
 	}
 
-	public static BlockBehaviour.Properties propertiesCactus() {
+	public static BlockBehaviour.Properties propertiesCactusCrop() {
 		return BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).pushReaction(PushReaction.DESTROY).sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).dynamicShape().instabreak().noCollission();
 	}
 
@@ -204,7 +225,7 @@ public class FloralisBlocks {
 		return BlockBehaviour.Properties.of().pushReaction(PushReaction.DESTROY).instabreak().noOcclusion();
 	}
 
-	public static BlockBehaviour.Properties propertiesCrop() {
+	public static BlockBehaviour.Properties propertiesFlowerCrop() {
 		return BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).pushReaction(PushReaction.DESTROY).sound(SoundType.CROP).instabreak().noCollission().randomTicks();
 	}
 }

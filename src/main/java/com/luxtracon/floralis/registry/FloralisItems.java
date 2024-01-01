@@ -17,7 +17,7 @@ import java.util.List;
 public class FloralisItems {
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(FloralisConstant.ID);
 
-	public static final List<DeferredItem<BlockItem>> DYE_BLOCKS = new ArrayList<>();
+	public static final List<DeferredItem<BlockItem>> DYE_BLOCK_ITEMS = new ArrayList<>();
 	public static final DeferredItem<BlockItem> WHITE_DYE_BLOCK = registerDyeBlock("white_dye_block",FloralisBlocks.WHITE_DYE_BLOCK);
 	public static final DeferredItem<BlockItem> LIGHT_GRAY_DYE_BLOCK = registerDyeBlock("light_gray_dye_block", FloralisBlocks.LIGHT_GRAY_DYE_BLOCK);
 	public static final DeferredItem<BlockItem> GRAY_DYE_BLOCK = registerDyeBlock("gray_dye_block", FloralisBlocks.GRAY_DYE_BLOCK);
@@ -37,14 +37,12 @@ public class FloralisItems {
 
 	public static DeferredItem<BlockItem> registerDyeBlock(String name, DeferredBlock<Block> deferredBlock) {
 		final var holder = ITEMS.registerSimpleBlockItem(name, deferredBlock);
-		DYE_BLOCKS.add(holder);
+		DYE_BLOCK_ITEMS.add(holder);
 		return holder;
 	}
 	
 	public static final DeferredItem<BlockItem> PLANT_FIBERS_BLOCK = ITEMS.register("plant_fibers_block", () -> new BlockItem(FloralisBlocks.PLANT_FIBERS_BLOCK.get(), new Item.Properties()));
 
-	public static final List<DeferredItem<BlockItem>> PLANT_ITEMS = new ArrayList<>();
-	
 	public static final DeferredItem<BlockItem> WHITE_FLOWER = registerPlant("white_flower", FloralisBlocks.WHITE_FLOWER);
 	public static final DeferredItem<BlockItem> LIGHT_GRAY_FLOWER = registerPlant("light_gray_flower", FloralisBlocks.LIGHT_GRAY_FLOWER);
 	public static final DeferredItem<BlockItem> GRAY_FLOWER = registerPlant("gray_flower", FloralisBlocks.GRAY_FLOWER);
@@ -79,10 +77,8 @@ public class FloralisItems {
 	public static final DeferredItem<BlockItem> MAGENTA_CACTUS = registerPlant("magenta_cactus", FloralisBlocks.MAGENTA_CACTUS);
 	public static final DeferredItem<BlockItem> PINK_CACTUS = registerPlant("pink_cactus", FloralisBlocks.PINK_CACTUS);
 
-	public static DeferredItem<BlockItem> registerPlant(String name,DeferredBlock<Block> deferredBlock) {
-		final var holder = ITEMS.registerSimpleBlockItem(name, deferredBlock);
-		PLANT_ITEMS.add(holder);
-		return holder;
+	public static DeferredItem<BlockItem> registerPlant(String name,DeferredBlock<? extends Block> deferredBlock) {
+        return ITEMS.registerSimpleBlockItem(name, deferredBlock);
 	}
 
 	public static final DeferredItem<ItemNameBlockItem> WHITE_FLOWER_SEEDS = registerSeed("white_flower_seeds", FloralisBlocks.WHITE_FLOWER_CROP);

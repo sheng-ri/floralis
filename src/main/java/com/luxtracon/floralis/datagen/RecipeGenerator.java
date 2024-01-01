@@ -56,7 +56,7 @@ public class RecipeGenerator extends RecipeProvider {
     }
 
     private void buildDyeBlockRecipes(RecipeOutput output) {
-        for (DeferredItem<BlockItem> holder : FloralisItems.DYE_BLOCKS) {
+        for (DeferredItem<BlockItem> holder : FloralisItems.DYE_BLOCK_ITEMS) {
             final var dyeColor = holder.getId().getPath().replace("_block", "");
 
             final var location = new ResourceLocation("minecraft:" + dyeColor);

@@ -43,40 +43,49 @@ public class FloralisItems {
 	
 	public static final DeferredItem<BlockItem> PLANT_FIBERS_BLOCK = ITEMS.register("plant_fibers_block", () -> new BlockItem(FloralisBlocks.PLANT_FIBERS_BLOCK.get(), new Item.Properties()));
 
-	public static final DeferredItem<BlockItem> WHITE_FLOWER = ITEMS.register("white_flower", () -> new BlockItem(FloralisBlocks.WHITE_FLOWER.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> LIGHT_GRAY_FLOWER = ITEMS.register("light_gray_flower", () -> new BlockItem(FloralisBlocks.LIGHT_GRAY_FLOWER.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> GRAY_FLOWER = ITEMS.register("gray_flower", () -> new BlockItem(FloralisBlocks.GRAY_FLOWER.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> BLACK_FLOWER = ITEMS.register("black_flower", () -> new BlockItem(FloralisBlocks.BLACK_FLOWER.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> BROWN_FLOWER = ITEMS.register("brown_flower", () -> new BlockItem(FloralisBlocks.BROWN_FLOWER.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> RED_FLOWER = ITEMS.register("red_flower", () -> new BlockItem(FloralisBlocks.RED_FLOWER.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> ORANGE_FLOWER = ITEMS.register("orange_flower", () -> new BlockItem(FloralisBlocks.ORANGE_FLOWER.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> YELLOW_FLOWER = ITEMS.register("yellow_flower", () -> new BlockItem(FloralisBlocks.YELLOW_FLOWER.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> LIME_FLOWER = ITEMS.register("lime_flower", () -> new BlockItem(FloralisBlocks.LIME_FLOWER.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> GREEN_FLOWER = ITEMS.register("green_flower", () -> new BlockItem(FloralisBlocks.GREEN_FLOWER.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> CYAN_FLOWER = ITEMS.register("cyan_flower", () -> new BlockItem(FloralisBlocks.CYAN_FLOWER.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> LIGHT_BLUE_FLOWER = ITEMS.register("light_blue_flower", () -> new BlockItem(FloralisBlocks.LIGHT_BLUE_FLOWER.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> BLUE_FLOWER = ITEMS.register("blue_flower", () -> new BlockItem(FloralisBlocks.BLUE_FLOWER.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> PURPLE_FLOWER = ITEMS.register("purple_flower", () -> new BlockItem(FloralisBlocks.PURPLE_FLOWER.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> MAGENTA_FLOWER = ITEMS.register("magenta_flower", () -> new BlockItem(FloralisBlocks.MAGENTA_FLOWER.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> PINK_FLOWER = ITEMS.register("pink_flower", () -> new BlockItem(FloralisBlocks.PINK_FLOWER.get(), new Item.Properties()));
+	// Seems this don't need a list for plant.
+//	public static final List<DeferredItem<BlockItem>> PLANT_ITEMS = new ArrayList<>();
+	
+	public static final DeferredItem<BlockItem> WHITE_FLOWER = registerPlant("white_flower", FloralisBlocks.WHITE_FLOWER);
+	public static final DeferredItem<BlockItem> LIGHT_GRAY_FLOWER = registerPlant("light_gray_flower", FloralisBlocks.LIGHT_GRAY_FLOWER);
+	public static final DeferredItem<BlockItem> GRAY_FLOWER = registerPlant("gray_flower", FloralisBlocks.GRAY_FLOWER);
+	public static final DeferredItem<BlockItem> BLACK_FLOWER = registerPlant("black_flower", FloralisBlocks.BLACK_FLOWER);
+	public static final DeferredItem<BlockItem> BROWN_FLOWER = registerPlant("brown_flower", FloralisBlocks.BROWN_FLOWER);
+	public static final DeferredItem<BlockItem> RED_FLOWER = registerPlant("red_flower", FloralisBlocks.RED_FLOWER);
+	public static final DeferredItem<BlockItem> ORANGE_FLOWER = registerPlant("orange_flower", FloralisBlocks.ORANGE_FLOWER);
+	public static final DeferredItem<BlockItem> YELLOW_FLOWER = registerPlant("yellow_flower", FloralisBlocks.YELLOW_FLOWER);
+	public static final DeferredItem<BlockItem> LIME_FLOWER = registerPlant("lime_flower", FloralisBlocks.LIME_FLOWER);
+	public static final DeferredItem<BlockItem> GREEN_FLOWER = registerPlant("green_flower", FloralisBlocks.GREEN_FLOWER);
+	public static final DeferredItem<BlockItem> CYAN_FLOWER = registerPlant("cyan_flower", FloralisBlocks.CYAN_FLOWER);
+	public static final DeferredItem<BlockItem> LIGHT_BLUE_FLOWER = registerPlant("light_blue_flower", FloralisBlocks.LIGHT_BLUE_FLOWER);
+	public static final DeferredItem<BlockItem> BLUE_FLOWER = registerPlant("blue_flower", FloralisBlocks.BLUE_FLOWER);
+	public static final DeferredItem<BlockItem> PURPLE_FLOWER = registerPlant("purple_flower", FloralisBlocks.PURPLE_FLOWER);
+	public static final DeferredItem<BlockItem> MAGENTA_FLOWER = registerPlant("magenta_flower", FloralisBlocks.MAGENTA_FLOWER);
+	public static final DeferredItem<BlockItem> PINK_FLOWER = registerPlant("pink_flower", FloralisBlocks.PINK_FLOWER);
 
-	public static final DeferredItem<BlockItem> WHITE_CACTUS = ITEMS.register("white_cactus", () -> new BlockItem(FloralisBlocks.WHITE_CACTUS.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> LIGHT_GRAY_CACTUS = ITEMS.register("light_gray_cactus", () -> new BlockItem(FloralisBlocks.LIGHT_GRAY_CACTUS.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> GRAY_CACTUS = ITEMS.register("gray_cactus", () -> new BlockItem(FloralisBlocks.GRAY_CACTUS.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> BLACK_CACTUS = ITEMS.register("black_cactus", () -> new BlockItem(FloralisBlocks.BLACK_CACTUS.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> BROWN_CACTUS = ITEMS.register("brown_cactus", () -> new BlockItem(FloralisBlocks.BROWN_CACTUS.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> RED_CACTUS = ITEMS.register("red_cactus", () -> new BlockItem(FloralisBlocks.RED_CACTUS.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> ORANGE_CACTUS = ITEMS.register("orange_cactus", () -> new BlockItem(FloralisBlocks.ORANGE_CACTUS.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> YELLOW_CACTUS = ITEMS.register("yellow_cactus", () -> new BlockItem(FloralisBlocks.YELLOW_CACTUS.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> LIME_CACTUS = ITEMS.register("lime_cactus", () -> new BlockItem(FloralisBlocks.LIME_CACTUS.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> GREEN_CACTUS = ITEMS.register("green_cactus", () -> new BlockItem(FloralisBlocks.GREEN_CACTUS.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> CYAN_CACTUS = ITEMS.register("cyan_cactus", () -> new BlockItem(FloralisBlocks.CYAN_CACTUS.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> LIGHT_BLUE_CACTUS = ITEMS.register("light_blue_cactus", () -> new BlockItem(FloralisBlocks.LIGHT_BLUE_CACTUS.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> BLUE_CACTUS = ITEMS.register("blue_cactus", () -> new BlockItem(FloralisBlocks.BLUE_CACTUS.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> PURPLE_CACTUS = ITEMS.register("purple_cactus", () -> new BlockItem(FloralisBlocks.PURPLE_CACTUS.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> MAGENTA_CACTUS = ITEMS.register("magenta_cactus", () -> new BlockItem(FloralisBlocks.MAGENTA_CACTUS.get(), new Item.Properties()));
-	public static final DeferredItem<BlockItem> PINK_CACTUS = ITEMS.register("pink_cactus", () -> new BlockItem(FloralisBlocks.PINK_CACTUS.get(), new Item.Properties()));
+	public static final DeferredItem<BlockItem> WHITE_CACTUS = registerPlant("white_cactus", FloralisBlocks.WHITE_CACTUS);
+	public static final DeferredItem<BlockItem> LIGHT_GRAY_CACTUS = registerPlant("light_gray_cactus", FloralisBlocks.LIGHT_GRAY_CACTUS);
+	public static final DeferredItem<BlockItem> GRAY_CACTUS = registerPlant("gray_cactus", FloralisBlocks.GRAY_CACTUS);
+	public static final DeferredItem<BlockItem> BLACK_CACTUS = registerPlant("black_cactus", FloralisBlocks.BLACK_CACTUS);
+	public static final DeferredItem<BlockItem> BROWN_CACTUS = registerPlant("brown_cactus", FloralisBlocks.BROWN_CACTUS);
+	public static final DeferredItem<BlockItem> RED_CACTUS = registerPlant("red_cactus", FloralisBlocks.RED_CACTUS);
+	public static final DeferredItem<BlockItem> ORANGE_CACTUS = registerPlant("orange_cactus", FloralisBlocks.ORANGE_CACTUS);
+	public static final DeferredItem<BlockItem> YELLOW_CACTUS = registerPlant("yellow_cactus", FloralisBlocks.YELLOW_CACTUS);
+	public static final DeferredItem<BlockItem> LIME_CACTUS = registerPlant("lime_cactus", FloralisBlocks.LIME_CACTUS);
+	public static final DeferredItem<BlockItem> GREEN_CACTUS = registerPlant("green_cactus", FloralisBlocks.GREEN_CACTUS);
+	public static final DeferredItem<BlockItem> CYAN_CACTUS = registerPlant("cyan_cactus", FloralisBlocks.CYAN_CACTUS);
+	public static final DeferredItem<BlockItem> LIGHT_BLUE_CACTUS = registerPlant("light_blue_cactus", FloralisBlocks.LIGHT_BLUE_CACTUS);
+	public static final DeferredItem<BlockItem> BLUE_CACTUS = registerPlant("blue_cactus", FloralisBlocks.BLUE_CACTUS);
+	public static final DeferredItem<BlockItem> PURPLE_CACTUS = registerPlant("purple_cactus", FloralisBlocks.PURPLE_CACTUS);
+	public static final DeferredItem<BlockItem> MAGENTA_CACTUS = registerPlant("magenta_cactus", FloralisBlocks.MAGENTA_CACTUS);
+	public static final DeferredItem<BlockItem> PINK_CACTUS = registerPlant("pink_cactus", FloralisBlocks.PINK_CACTUS);
 
+	public static DeferredItem<BlockItem> registerPlant(String name,DeferredBlock<Block> deferredBlock) {
+		final var holder = ITEMS.registerSimpleBlockItem(name, deferredBlock);
+//		PLANT_ITEMS.add(holder);
+		return holder;
+	}
+	
 	public static final DeferredItem<BlockItem> WHITE_FLOWER_SEEDS = ITEMS.register("white_flower_seeds", () -> new ItemNameBlockItem(FloralisBlocks.WHITE_FLOWER_CROP.get(), new Item.Properties()));
 	public static final DeferredItem<BlockItem> LIGHT_GRAY_FLOWER_SEEDS = ITEMS.register("light_gray_flower_seeds", () -> new ItemNameBlockItem(FloralisBlocks.LIGHT_GRAY_FLOWER_CROP.get(), new Item.Properties()));
 	public static final DeferredItem<BlockItem> GRAY_FLOWER_SEEDS = ITEMS.register("gray_flower_seeds", () -> new ItemNameBlockItem(FloralisBlocks.GRAY_FLOWER_CROP.get(), new Item.Properties()));
@@ -111,22 +120,30 @@ public class FloralisItems {
 	public static final DeferredItem<BlockItem> MAGENTA_CACTUS_SEEDS = ITEMS.register("magenta_cactus_seeds", () -> new ItemNameBlockItem(FloralisBlocks.MAGENTA_CACTUS_CROP.get(), new Item.Properties()));
 	public static final DeferredItem<BlockItem> PINK_CACTUS_SEEDS = ITEMS.register("pink_cactus_seeds", () -> new ItemNameBlockItem(FloralisBlocks.PINK_CACTUS_CROP.get(), new Item.Properties()));
 
-	public static final DeferredItem<Item> WHITE_PETALS = ITEMS.register("white_petals", () -> new Item(new Item.Properties()));
-	public static final DeferredItem<Item> LIGHT_GRAY_PETALS = ITEMS.register("light_gray_petals", () -> new Item(new Item.Properties()));
-	public static final DeferredItem<Item> GRAY_PETALS = ITEMS.register("gray_petals", () -> new Item(new Item.Properties()));
-	public static final DeferredItem<Item> BLACK_PETALS = ITEMS.register("black_petals", () -> new Item(new Item.Properties()));
-	public static final DeferredItem<Item> BROWN_PETALS = ITEMS.register("brown_petals", () -> new Item(new Item.Properties()));
-	public static final DeferredItem<Item> RED_PETALS = ITEMS.register("red_petals", () -> new Item(new Item.Properties()));
-	public static final DeferredItem<Item> ORANGE_PETALS = ITEMS.register("orange_petals", () -> new Item(new Item.Properties()));
-	public static final DeferredItem<Item> YELLOW_PETALS = ITEMS.register("yellow_petals", () -> new Item(new Item.Properties()));
-	public static final DeferredItem<Item> LIME_PETALS = ITEMS.register("lime_petals", () -> new Item(new Item.Properties()));
-	public static final DeferredItem<Item> GREEN_PETALS = ITEMS.register("green_petals", () -> new Item(new Item.Properties()));
-	public static final DeferredItem<Item> CYAN_PETALS = ITEMS.register("cyan_petals", () -> new Item(new Item.Properties()));
-	public static final DeferredItem<Item> LIGHT_BLUE_PETALS = ITEMS.register("light_blue_petals", () -> new Item(new Item.Properties()));
-	public static final DeferredItem<Item> BLUE_PETALS = ITEMS.register("blue_petals", () -> new Item(new Item.Properties()));
-	public static final DeferredItem<Item> PURPLE_PETALS = ITEMS.register("purple_petals", () -> new Item(new Item.Properties()));
-	public static final DeferredItem<Item> MAGENTA_PETALS = ITEMS.register("magenta_petals", () -> new Item(new Item.Properties()));
-	public static final DeferredItem<Item> PINK_PETALS = ITEMS.register("pink_petals", () -> new Item(new Item.Properties()));
+	public static List<DeferredItem<Item>> PETAL_ITEMS = new ArrayList<>();
+	
+	public static final DeferredItem<Item> WHITE_PETALS = registerPetal("white_petals");
+	public static final DeferredItem<Item> LIGHT_GRAY_PETALS = registerPetal("light_gray_petals");
+	public static final DeferredItem<Item> GRAY_PETALS = registerPetal("gray_petals");
+	public static final DeferredItem<Item> BLACK_PETALS = registerPetal("black_petals");
+	public static final DeferredItem<Item> BROWN_PETALS = registerPetal("brown_petals");
+	public static final DeferredItem<Item> RED_PETALS = registerPetal("red_petals");
+	public static final DeferredItem<Item> ORANGE_PETALS = registerPetal("orange_petals");
+	public static final DeferredItem<Item> YELLOW_PETALS = registerPetal("yellow_petals");
+	public static final DeferredItem<Item> LIME_PETALS = registerPetal("lime_petals");
+	public static final DeferredItem<Item> GREEN_PETALS = registerPetal("green_petals");
+	public static final DeferredItem<Item> CYAN_PETALS = registerPetal("cyan_petals");
+	public static final DeferredItem<Item> LIGHT_BLUE_PETALS = registerPetal("light_blue_petals");
+	public static final DeferredItem<Item> BLUE_PETALS = registerPetal("blue_petals");
+	public static final DeferredItem<Item> PURPLE_PETALS = registerPetal("purple_petals");
+	public static final DeferredItem<Item> MAGENTA_PETALS = registerPetal("magenta_petals");
+	public static final DeferredItem<Item> PINK_PETALS = registerPetal("pink_petals");
 
+	public static DeferredItem<Item> registerPetal(String name) {
+		final var holder = ITEMS.registerSimpleItem(name);
+		PETAL_ITEMS.add(holder);
+		return holder;
+	}
+	
 	public static final DeferredItem<PlantFibersItem> PLANT_FIBERS = ITEMS.register("plant_fibers", () -> new PlantFibersItem(new Item.Properties()));
 }

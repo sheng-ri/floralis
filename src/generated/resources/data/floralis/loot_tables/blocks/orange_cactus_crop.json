@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "block": "floralis:orange_cactus_crop",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "age": "5"
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "floralis:orange_cactus_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "floralis:blocks/orange_cactus_crop"
+}

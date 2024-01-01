@@ -16,5 +16,6 @@ public class DataGenerator {
         final var lookupProvider = event.getLookupProvider();
         final var packOutput = generator.getPackOutput();
         generator.addProvider(event.includeServer(), new RecipeGenerator(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new LootTableGenerator(packOutput));
     }
 }

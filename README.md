@@ -1,6 +1,9 @@
+## Now is under development.
+
 This is Neoforge 1.20.4 compat version.
 
-**Now is under development.**
+#### Some Change
+* Don't support other mode.
 
 Origin repo: [luxtracon/floralis](https://github.com/luxtracon/floralis)
 ___

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "-": {
+      "item": "minecraft:green_dye"
+    }
+  },
+  "pattern": [
+    "---",
+    "---",
+    "---"
+  ],
+  "result": {
+    "item": "floralis:green_dye_block"
+  }
+}

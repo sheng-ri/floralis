@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "-": {
+      "item": "minecraft:orange_dye"
+    }
+  },
+  "pattern": [
+    "---",
+    "---",
+    "---"
+  ],
+  "result": {
+    "item": "floralis:orange_dye_block"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "-": {
+      "item": "minecraft:lime_dye"
+    }
+  },
+  "pattern": [
+    "---",
+    "---",
+    "---"
+  ],
+  "result": {
+    "item": "floralis:lime_dye_block"
+  }
+}

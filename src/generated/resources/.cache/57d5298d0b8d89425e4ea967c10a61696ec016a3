@@ -1,0 +1,11 @@
+// 1.20.4	2024-01-04T16:26:32.0575236	Tags for minecraft:block mod id floralis
+71eef0cde8a562dd77e6c09345a99a8aa108b70a data/forge/tags/blocks/storage_blocks.json
+a6015053b058fb185772a779927ed6aa84835c9f data/minecraft/tags/blocks/bee_growables.json
+a6015053b058fb185772a779927ed6aa84835c9f data/minecraft/tags/blocks/crops.json
+7f3796ea692f848483d051df7454aae5a07e8f22 data/minecraft/tags/blocks/enderman_holdable.json
+7f3796ea692f848483d051df7454aae5a07e8f22 data/minecraft/tags/blocks/flowers.json
+a6015053b058fb185772a779927ed6aa84835c9f data/minecraft/tags/blocks/maintains_farmland.json
+a6015053b058fb185772a779927ed6aa84835c9f data/minecraft/tags/blocks/mineable/axe.json
+74b26b4a9ee6368ee5ff6e14d61b46f9d7be95ed data/minecraft/tags/blocks/mineable/hoe.json
+7f3796ea692f848483d051df7454aae5a07e8f22 data/minecraft/tags/blocks/small_flowers.json
+5ed790ef9184f30881723acf45b91dbec3b55395 data/minecraft/tags/blocks/sword_efficient.json

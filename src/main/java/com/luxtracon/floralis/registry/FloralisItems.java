@@ -18,24 +18,24 @@ public class FloralisItems {
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(FloralisConstant.ID);
 
 	public static final List<DeferredItem<BlockItem>> DYE_BLOCK_ITEMS = new ArrayList<>();
-	public static final DeferredItem<BlockItem> WHITE_DYE_BLOCK = registerDyeBlock("white_dye_block",FloralisBlocks.WHITE_DYE_BLOCK);
-	public static final DeferredItem<BlockItem> LIGHT_GRAY_DYE_BLOCK = registerDyeBlock("light_gray_dye_block", FloralisBlocks.LIGHT_GRAY_DYE_BLOCK);
-	public static final DeferredItem<BlockItem> GRAY_DYE_BLOCK = registerDyeBlock("gray_dye_block", FloralisBlocks.GRAY_DYE_BLOCK);
-	public static final DeferredItem<BlockItem> BLACK_DYE_BLOCK = registerDyeBlock("black_dye_block", FloralisBlocks.BLACK_DYE_BLOCK);
-	public static final DeferredItem<BlockItem> BROWN_DYE_BLOCK = registerDyeBlock("brown_dye_block", FloralisBlocks.BROWN_DYE_BLOCK);
-	public static final DeferredItem<BlockItem> RED_DYE_BLOCK = registerDyeBlock("red_dye_block", FloralisBlocks.RED_DYE_BLOCK);
-	public static final DeferredItem<BlockItem> ORANGE_DYE_BLOCK = registerDyeBlock("orange_dye_block", FloralisBlocks.ORANGE_DYE_BLOCK);
-	public static final DeferredItem<BlockItem> YELLOW_DYE_BLOCK = registerDyeBlock("yellow_dye_block", FloralisBlocks.YELLOW_DYE_BLOCK);
-	public static final DeferredItem<BlockItem> LIME_DYE_BLOCK = registerDyeBlock("lime_dye_block", FloralisBlocks.LIME_DYE_BLOCK);
-	public static final DeferredItem<BlockItem> GREEN_DYE_BLOCK = registerDyeBlock("green_dye_block", FloralisBlocks.GREEN_DYE_BLOCK);
-	public static final DeferredItem<BlockItem> CYAN_DYE_BLOCK = registerDyeBlock("cyan_dye_block", FloralisBlocks.CYAN_DYE_BLOCK);
-	public static final DeferredItem<BlockItem> LIGHT_BLUE_DYE_BLOCK = registerDyeBlock("light_blue_dye_block", FloralisBlocks.LIGHT_BLUE_DYE_BLOCK);
-	public static final DeferredItem<BlockItem> BLUE_DYE_BLOCK = registerDyeBlock("blue_dye_block", FloralisBlocks.BLUE_DYE_BLOCK);
-	public static final DeferredItem<BlockItem> PURPLE_DYE_BLOCK = registerDyeBlock("purple_dye_block", FloralisBlocks.PURPLE_DYE_BLOCK);
-	public static final DeferredItem<BlockItem> MAGENTA_DYE_BLOCK = registerDyeBlock("magenta_dye_block", FloralisBlocks.MAGENTA_DYE_BLOCK);
-	public static final DeferredItem<BlockItem> PINK_DYE_BLOCK = registerDyeBlock("pink_dye_block", FloralisBlocks.PINK_DYE_BLOCK);
+	public static final DeferredItem<BlockItem> WHITE_DYE_BLOCK = registerPureItem("white_dye_block",FloralisBlocks.WHITE_DYE_BLOCK);
+	public static final DeferredItem<BlockItem> LIGHT_GRAY_DYE_BLOCK = registerPureItem("light_gray_dye_block", FloralisBlocks.LIGHT_GRAY_DYE_BLOCK);
+	public static final DeferredItem<BlockItem> GRAY_DYE_BLOCK = registerPureItem("gray_dye_block", FloralisBlocks.GRAY_DYE_BLOCK);
+	public static final DeferredItem<BlockItem> BLACK_DYE_BLOCK = registerPureItem("black_dye_block", FloralisBlocks.BLACK_DYE_BLOCK);
+	public static final DeferredItem<BlockItem> BROWN_DYE_BLOCK = registerPureItem("brown_dye_block", FloralisBlocks.BROWN_DYE_BLOCK);
+	public static final DeferredItem<BlockItem> RED_DYE_BLOCK = registerPureItem("red_dye_block", FloralisBlocks.RED_DYE_BLOCK);
+	public static final DeferredItem<BlockItem> ORANGE_DYE_BLOCK = registerPureItem("orange_dye_block", FloralisBlocks.ORANGE_DYE_BLOCK);
+	public static final DeferredItem<BlockItem> YELLOW_DYE_BLOCK = registerPureItem("yellow_dye_block", FloralisBlocks.YELLOW_DYE_BLOCK);
+	public static final DeferredItem<BlockItem> LIME_DYE_BLOCK = registerPureItem("lime_dye_block", FloralisBlocks.LIME_DYE_BLOCK);
+	public static final DeferredItem<BlockItem> GREEN_DYE_BLOCK = registerPureItem("green_dye_block", FloralisBlocks.GREEN_DYE_BLOCK);
+	public static final DeferredItem<BlockItem> CYAN_DYE_BLOCK = registerPureItem("cyan_dye_block", FloralisBlocks.CYAN_DYE_BLOCK);
+	public static final DeferredItem<BlockItem> LIGHT_BLUE_DYE_BLOCK = registerPureItem("light_blue_dye_block", FloralisBlocks.LIGHT_BLUE_DYE_BLOCK);
+	public static final DeferredItem<BlockItem> BLUE_DYE_BLOCK = registerPureItem("blue_dye_block", FloralisBlocks.BLUE_DYE_BLOCK);
+	public static final DeferredItem<BlockItem> PURPLE_DYE_BLOCK = registerPureItem("purple_dye_block", FloralisBlocks.PURPLE_DYE_BLOCK);
+	public static final DeferredItem<BlockItem> MAGENTA_DYE_BLOCK = registerPureItem("magenta_dye_block", FloralisBlocks.MAGENTA_DYE_BLOCK);
+	public static final DeferredItem<BlockItem> PINK_DYE_BLOCK = registerPureItem("pink_dye_block", FloralisBlocks.PINK_DYE_BLOCK);
 
-	public static DeferredItem<BlockItem> registerDyeBlock(String name, DeferredBlock<Block> deferredBlock) {
+	public static DeferredItem<BlockItem> registerPureItem(String name, DeferredBlock<Block> deferredBlock) {
 		final var holder = ITEMS.registerSimpleBlockItem(name, deferredBlock);
 		DYE_BLOCK_ITEMS.add(holder);
 		return holder;

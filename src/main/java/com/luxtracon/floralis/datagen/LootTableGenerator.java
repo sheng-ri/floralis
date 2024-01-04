@@ -26,7 +26,7 @@ public class LootTableGenerator extends LootTableProvider {
 
     public LootTableGenerator(PackOutput p_254123_) {
         super(p_254123_, Collections.emptySet(), List.of(
-                new SubProviderEntry(DyeBlockDropLootTable::new, LootContextParamSets.BLOCK),
+                new SubProviderEntry(PureBlockDropLootTable::new, LootContextParamSets.BLOCK),
                 new SubProviderEntry(CropDropLootTable::new, LootContextParamSets.BLOCK),
                 new SubProviderEntry(PlantDropTableLoot::new, LootContextParamSets.BLOCK)
         ));

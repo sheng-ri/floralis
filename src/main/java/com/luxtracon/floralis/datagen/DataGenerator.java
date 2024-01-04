@@ -17,5 +17,8 @@ public class DataGenerator {
         final var packOutput = generator.getPackOutput();
         generator.addProvider(event.includeServer(), new RecipeGenerator(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(), new LootTableGenerator(packOutput));
+        generator.addProvider(event.includeServer(), new WorldGEn(packOutput,lookupProvider));
+
+        generator.addProvider(event.includeServer(), new TagGenerator(packOutput, lookupProvider, event.getExistingFileHelper()));
     }
 }

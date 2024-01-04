@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "-": {
+      "item": "floralis:plant_fibers"
+    }
+  },
+  "pattern": [
+    "---",
+    "---",
+    "---"
+  ],
+  "result": {
+    "item": "floralis:plant_fibers_block"
+  }
+}

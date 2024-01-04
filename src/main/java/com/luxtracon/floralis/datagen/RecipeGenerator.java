@@ -36,6 +36,8 @@ public class RecipeGenerator extends RecipeProvider {
     protected void buildRecipes(@NotNull RecipeOutput output) {
         buildDyeBlockRecipes(output);
         buildDyeCookRecipes(output);
+
+        createSingleBlockRecipe(output, FloralisItems.PLANT_FIBERS.asItem(), FloralisItems.PLANT_FIBERS_BLOCK.asItem());
     }
 
     private void buildDyeCookRecipes(RecipeOutput output) {
@@ -62,12 +64,12 @@ public class RecipeGenerator extends RecipeProvider {
             final var location = new ResourceLocation("minecraft:" + dyeColor);
             final var dyeItem = BuiltInRegistries.ITEM.get(location);
             final var dyeBlockItem = holder.get();
-            createSingleDyeBlockRecipe(output, dyeItem, dyeBlockItem);
+            createSingleBlockRecipe(output, dyeItem, dyeBlockItem);
         }
         
     }
 
-    private void createSingleDyeBlockRecipe(RecipeOutput output, Item dye, Item dyeBlock) {
+    private void createSingleBlockRecipe(RecipeOutput output, Item dye, Item dyeBlock) {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, dyeBlock)
                 .pattern("---") // Create recipe pattern
                 .pattern("---") // Create recipe pattern

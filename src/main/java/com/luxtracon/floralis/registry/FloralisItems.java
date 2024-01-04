@@ -81,6 +81,8 @@ public class FloralisItems {
         return ITEMS.registerSimpleBlockItem(name, deferredBlock);
 	}
 
+	public static final List<DeferredItem<ItemNameBlockItem>> SEED_ITEMS = new ArrayList<>();
+
 	public static final DeferredItem<ItemNameBlockItem> WHITE_FLOWER_SEEDS = registerSeed("white_flower_seeds", FloralisBlocks.WHITE_FLOWER_CROP);
 	public static final DeferredItem<ItemNameBlockItem> LIGHT_GRAY_FLOWER_SEEDS = registerSeed("light_gray_flower_seeds", FloralisBlocks.LIGHT_GRAY_FLOWER_CROP);
 	public static final DeferredItem<ItemNameBlockItem> GRAY_FLOWER_SEEDS = registerSeed("gray_flower_seeds", FloralisBlocks.GRAY_FLOWER_CROP);
@@ -116,7 +118,9 @@ public class FloralisItems {
 	public static final DeferredItem<ItemNameBlockItem> PINK_CACTUS_SEEDS = registerSeed("pink_cactus_seeds", FloralisBlocks.PINK_CACTUS_CROP);
 
 	public static DeferredItem<ItemNameBlockItem> registerSeed(String name,DeferredBlock<? extends Block> deferredBlock) {
-        return ITEMS.register(name, () -> new ItemNameBlockItem(deferredBlock.get(),new Item.Properties()));
+		final var holder = ITEMS.register(name, () -> new ItemNameBlockItem(deferredBlock.get(), new Item.Properties()));
+		SEED_ITEMS.add(holder);
+        return holder;
 	}
 	
 	public static List<DeferredItem<Item>> PETAL_ITEMS = new ArrayList<>();

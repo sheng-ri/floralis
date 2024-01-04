@@ -17,8 +17,10 @@ public class DataGenerator {
         final var packOutput = generator.getPackOutput();
         generator.addProvider(event.includeServer(), new RecipeGenerator(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(), new LootTableGenerator(packOutput));
-        generator.addProvider(event.includeServer(), new WorldGEn(packOutput,lookupProvider));
+        generator.addProvider(event.includeServer(), new WorldGenGenerator(packOutput,lookupProvider));
 
-        generator.addProvider(event.includeServer(), new TagGenerator(packOutput, lookupProvider, event.getExistingFileHelper()));
+        final var blockTagGenerator = new BlockTagGenerator(packOutput, lookupProvider, event.getExistingFileHelper());
+        generator.addProvider(event.includeServer(), blockTagGenerator);
+        generator.addProvider(event.includeServer(), new ItemTagGenerator(packOutput, lookupProvider,blockTagGenerator.contentsGetter()));
     }
 }

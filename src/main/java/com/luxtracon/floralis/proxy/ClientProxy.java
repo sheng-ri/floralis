@@ -1,18 +1,15 @@
 package com.luxtracon.floralis.proxy;
 
-import com.luxtracon.floralis.registry.FloralisCreativeModeTabs;
 import com.luxtracon.floralis.registry.FloralisBlocks;
+import com.luxtracon.floralis.registry.FloralisCreativeModeTabs;
 import com.luxtracon.floralis.registry.FloralisItems;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.world.level.GrassColor;
 import net.minecraft.world.level.block.Block;
-
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -246,12 +243,7 @@ public class ClientProxy extends CommonProxy {
 		this.blockColor(FloralisBlocks.PINK_CACTUS_CROP.get());
 	}
 
-	@Override
-	public void onServerAboutToStart(ServerAboutToStartEvent pEvent) {
-		super.onServerAboutToStart(pEvent);
-	}
-
-	@Override
+    @Override
 	public void onVillagerTrades(VillagerTradesEvent pEvent) {
 		super.onVillagerTrades(pEvent);
 	}

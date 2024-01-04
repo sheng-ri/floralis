@@ -7,7 +7,6 @@ import com.luxtracon.floralis.registry.FloralisItems;
 import com.luxtracon.floralis.registry.FloralisPottables;
 import com.luxtracon.floralis.trade.EmeraldsForItemsTrade;
 import com.luxtracon.floralis.trade.ItemsForEmeraldsTrade;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerType;
 import net.minecraft.world.item.Item;
@@ -42,16 +41,6 @@ public class CommonProxy {
 	}
 
 	public void onServerAboutToStart(ServerAboutToStartEvent pEvent) {
-		var registryAccess = pEvent.getServer().registryAccess();
-		var processorList = registryAccess.registry(Registries.PROCESSOR_LIST).orElseThrow();
-		var templatePool = registryAccess.registry(Registries.TEMPLATE_POOL).orElseThrow();
-
-		// Dirty hack code.
-//		this.addPieceToPool(processorList, templatePool, "floralis:village/desert/houses/farm", new ResourceLocation("minecraft:village/desert/houses"), FloralisConfig.DESERT_FARM.get());
-//		this.addPieceToPool(processorList, templatePool, "floralis:village/plains/houses/farm", new ResourceLocation("minecraft:village/plains/houses"), FloralisConfig.PLAINS_FARM.get());
-//		this.addPieceToPool(processorList, templatePool, "floralis:village/savanna/houses/farm", new ResourceLocation("minecraft:village/savanna/houses"), FloralisConfig.SAVANNA_FARM.get());
-//		this.addPieceToPool(processorList, templatePool, "floralis:village/snowy/houses/farm", new ResourceLocation("minecraft:village/snowy/houses"), FloralisConfig.SNOWY_FARM.get());
-//		this.addPieceToPool(processorList, templatePool, "floralis:village/taiga/houses/farm", new ResourceLocation("minecraft:village/taiga/houses"), FloralisConfig.TAIGA_FARM.get());
 	}
 
 	public void onVillagerTrades(VillagerTradesEvent pEvent) {
@@ -91,23 +80,6 @@ public class CommonProxy {
 			level1Trade.add(new EmeraldsForItemsTrade(ImmutableMap.<VillagerType, Item>builder().put(VillagerType.PLAINS, FloralisItems.MAGENTA_FLOWER_SEEDS.get()).put(VillagerType.TAIGA, FloralisItems.MAGENTA_FLOWER_SEEDS.get()).put(VillagerType.SNOW, FloralisItems.MAGENTA_FLOWER_SEEDS.get()).put(VillagerType.DESERT, FloralisItems.MAGENTA_CACTUS_SEEDS.get()).put(VillagerType.JUNGLE, FloralisItems.MAGENTA_FLOWER_SEEDS.get()).put(VillagerType.SAVANNA, FloralisItems.MAGENTA_FLOWER_SEEDS.get()).put(VillagerType.SWAMP, FloralisItems.MAGENTA_FLOWER_SEEDS.get()).build()));
 			level1Trade.add(new EmeraldsForItemsTrade(ImmutableMap.<VillagerType, Item>builder().put(VillagerType.PLAINS, FloralisItems.PINK_FLOWER_SEEDS.get()).put(VillagerType.TAIGA, FloralisItems.PINK_FLOWER_SEEDS.get()).put(VillagerType.SNOW, FloralisItems.PINK_FLOWER_SEEDS.get()).put(VillagerType.DESERT, FloralisItems.PINK_CACTUS_SEEDS.get()).put(VillagerType.JUNGLE, FloralisItems.PINK_FLOWER_SEEDS.get()).put(VillagerType.SAVANNA, FloralisItems.PINK_FLOWER_SEEDS.get()).put(VillagerType.SWAMP, FloralisItems.PINK_FLOWER_SEEDS.get()).build()));
 		}
-	}
 
-	/*
-	Dirty hack code.
-	 */
-//	public void addPieceToPool(Registry<StructureProcessorList> pStructureProcessorList, Registry<StructureTemplatePool> pStructureTemplatePool, String pPiece, ResourceLocation pPool, int pWeight) {
-//		var singlePoolElement = SinglePoolElement.legacy(pPiece, pStructureProcessorList.getHolderOrThrow(ResourceKey.create(Registries.PROCESSOR_LIST, new ResourceLocation("minecraft", "empty")))).apply(StructureTemplatePool.Projection.RIGID);
-//		var structureTemplatePool = pStructureTemplatePool.get(pPool);
-//		List<Pair<StructurePoolElement, Integer>> list;
-//		if (structureTemplatePool != null) {
-//			list = new ArrayList<>(structureTemplatePool.rawTemplates);
-//			for (int i = 0; i < pWeight; i++) {
-//				structureTemplatePool.templates.add(singlePoolElement);
-//			}
-//
-//			list.add(new Pair<>(singlePoolElement, pWeight));
-//			structureTemplatePool.rawTemplates = list;
-//		}
-//	}
+	}
 }

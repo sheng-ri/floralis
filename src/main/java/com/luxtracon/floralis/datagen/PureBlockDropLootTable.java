@@ -19,6 +19,10 @@ import org.jetbrains.annotations.NotNull;
 import java.util.function.BiConsumer;
 
 public class PureBlockDropLootTable implements LootTableSubProvider {
+    // TODO: potted_flower don't drop
+    // TODO: add shovel for dye block
+    // TODO: village structure gen
+    // TODO: biome modifier
     @Override
     public void generate(@NotNull BiConsumer<ResourceLocation, LootTable.Builder> builder) {
         for (DeferredItem<BlockItem> dyeBlock : FloralisItems.DYE_BLOCK_ITEMS) {

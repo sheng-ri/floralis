@@ -1,4 +1,4 @@
-// 1.20.4	2024-01-01T19:32:08.1240607	Recipes
+// 1.20.4	2024-01-04T18:52:02.0646978	Recipes
 de33c3524b783dfc461469166a6bb19ebc36fedf data/floralis/advancements/recipes/misc/black_dye_block.json
 2dc344c624519835dc24bef23c133946ceef5abe data/floralis/advancements/recipes/misc/blue_dye_block.json
 931b1f60434079b72da8666275ae1c6bcf948654 data/floralis/advancements/recipes/misc/brown_dye_block.json
@@ -11,6 +11,8 @@ d503fbc76d0ee09a3b0e1d0cc3b15c21e7909357 data/floralis/advancements/recipes/misc
 f03b7aa15626653107ddcbbce322098b328911d9 data/floralis/advancements/recipes/misc/magenta_dye_block.json
 ed48f67865195e1c120bcb4baf0ff042d7047df8 data/floralis/advancements/recipes/misc/orange_dye_block.json
 5b30475398034ad41e9cfa9a4661b6604f8df621 data/floralis/advancements/recipes/misc/pink_dye_block.json
+e0317a93e0cf860bc85551566e31862299aee8c3 data/floralis/advancements/recipes/misc/plant_fibers.json
+5cf75907dd3f3d504547ea8b13286c1153fa51d7 data/floralis/advancements/recipes/misc/plant_fibers_block.json
 eca2c2f1024bd2aabde70cf3d9985eceb758179f data/floralis/advancements/recipes/misc/purple_dye_block.json
 00f5ec98511dc95073bc22a17bda0785c8c5dc81 data/floralis/advancements/recipes/misc/red_dye_block.json
 4f6d61197be7d0ad0c7157220fbb0b4d484c95dc data/floralis/advancements/recipes/misc/white_dye_block.json
@@ -27,6 +29,8 @@ ed2aa1a1410309836fb51940bf4137b24dbf535d data/floralis/recipes/gray_dye_block.js
 47614ca1c19d057b18a6cc7973eb573a24da6113 data/floralis/recipes/magenta_dye_block.json
 f54fea175a0e82725caeec6081e78d80d17a8765 data/floralis/recipes/orange_dye_block.json
 23cfad720d1a95e2dc9d9efeb2f76b55c8b4a970 data/floralis/recipes/pink_dye_block.json
+df08723e77188da3a348212e52790186c22fb9c8 data/floralis/recipes/plant_fibers.json
+08cdb2d4cbb09d185bd0ba4116ead3677b11cff6 data/floralis/recipes/plant_fibers_block.json
 c4a56e3522782e8cc14eed82876eb344af670619 data/floralis/recipes/purple_dye_block.json
 c678825c8c82d58f76c563c3fec8d6cb2d081e07 data/floralis/recipes/red_dye_block.json
 da96fdd98f0f6592d5463a6a632df348155508a9 data/floralis/recipes/white_dye_block.json

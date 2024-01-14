@@ -1,4 +1,5 @@
 ## ~~Now is under development.~~
+## Get release in github action
 
 This is Neoforge 1.20.4 compat version.
 

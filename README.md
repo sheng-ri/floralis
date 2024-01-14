@@ -4,6 +4,7 @@ This is Neoforge 1.20.4 compat version.
 
 #### Some Change
 * Don't support other mod.
+* The farm in village will not generate crop from floralis
 
 #### Loot Table
 * Cactus | Flower
@@ -21,6 +22,7 @@ This is Neoforge 1.20.4 compat version.
     * set_count(2) | explosion_decay | apply_bonus : Seeds
   * Third Pool(!(age=5) && !(Shears || Silk Touch))
     * explosion_decay | seeds
+
 Origin repo: [luxtracon/floralis](https://github.com/luxtracon/floralis)
 ___
 Floralis aims to make any type of dye farmable by adding farmable cacti and flowers to the game. Furthemore it aims to do that in an automatable way with the help of third party mods. For example with a Multi Farm from Forestry, Garden Cloche from Immersive Engineering, Plant Sower and Plant Gatherer from Industrial Foregoing and Phytogenic Insulator from Thermal Expansion.

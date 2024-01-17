@@ -5,10 +5,9 @@ This is Neoforge 1.20.4 compat version.
 
 #### Some Change
 * Don't support other mod.
-* The farm in village will not generate crop from floralis
-  * Origin code is modify StructureTemplatePool fileds(rawTemplates,templates)
-  
-    But now rawTemplates is immutable and these fields is final.(Need Help)
+* Farm in village default rate is 4.
+* Add a config for disable trade.
+
 #### Loot Table
 * Cactus | Flower
   * Shears || Silk Touch => Cactus
